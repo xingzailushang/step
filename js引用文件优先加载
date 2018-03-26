@@ -1,31 +1,31 @@
 //先加载jquery
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 //为保证smart.js中的参数在下段代码引用时已加载完  使用 document.write
-		<script type="text/javascript">
-			document.write('<script type="text/javascript" src="js/smart.js"><\/script>')
-		</script>
-		<script>
-    //获取url中的参数
-			function getQueryVariable(variable) {
-				var query = window.location.search.substring(1);
-				var vars = query.split("&");
-				for(var i = 0; i < vars.length; i++) {
-					var pair = vars[i].split("=");
-					if(pair[0] == variable) {
-						return pair[1];
-					}
-				}
-				return(false);
+<script type="text/javascript">
+	document.write('<script type="text/javascript" src="js/smart.js"><\/script>')
+</script>
+<script>
+//获取url中的参数
+	function getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for(var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split("=");
+			if(pair[0] == variable) {
+				return pair[1];
 			}
-			code = getQueryVariable("code");
-			serId = getQueryVariable("userId");
-			localStorage.userId=userId;
-			localStorage.code = code;
-      //loginStatus 储存用户登录状态
-			if(sessionStorage.loginStatus!="true"){
-				if(code==null || code== "" || code== undefined){
-					//重定向地址不能带多个参数，暂时先用缓存解决  以下为微信公众号分享后直接登录用链接
-					location.href=zhttpWx+"circle.html?zjbUserId="+zjbUserId+zhttpWx2;
-				}
-			}
-		</script>
+		}
+		return(false);
+	}
+	code = getQueryVariable("code");
+	serId = getQueryVariable("userId");
+	localStorage.userId=userId;
+	localStorage.code = code;
+//loginStatus 储存用户登录状态
+	if(sessionStorage.loginStatus!="true"){
+		if(code==null || code== "" || code== undefined){
+			//重定向地址不能带多个参数，暂时先用缓存解决  以下为微信公众号分享后直接登录用链接
+			location.href=zhttpWx+"circle.html?zjbUserId="+zjbUserId+zhttpWx2;
+		}
+	}
+</script>
