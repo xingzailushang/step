@@ -1,0 +1,20 @@
+原生JS 窗口尺寸：
+
+window.innerWidth
+window.innerHeight
+document.body.clientWidth
+document.body.clientHeight
+
+JQuery 窗口尺寸：
+
+$(window).height(); //浏览器时下窗口可视区域高度
+$(document).height(); //浏览器时下窗口文档的高度
+$(document.body).height();//浏览器时下窗口文档body的高度
+$(document.body).outerHeight(true);//浏览器时下窗口文档body的总高度 包括border padding margin
+$(window).width(); //浏览器时下窗口可视区域宽度
+$(document).width();//浏览器时下窗口文档对于象宽度
+$(document.body).width();//浏览器时下窗口文档body的高度
+$(document.body).outerWidth(true);//浏览器时下窗口文档body的总宽度 包括border padding margin
+
+$(document).scrollTop(); //获取滚动条到顶部的垂直高度
+$(document).scrollLeft(); //获取滚动条到左边的垂直宽度
