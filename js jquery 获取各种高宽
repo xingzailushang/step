@@ -1,9 +1,9 @@
 原生JS 窗口尺寸：
 
-window.innerWidth
-window.innerHeight
-document.body.clientWidth
-document.body.clientHeight
+window.innerWidth  //返回窗口的文档显示区的高度。
+window.innerHeight  //返回窗口的文档显示区的宽度。
+document.body.clientWidth  //网页可见区域宽
+document.body.clientHeight  //网页可见区域高
 
 JQuery 窗口尺寸：
 
@@ -18,3 +18,10 @@ $(document.body).outerWidth(true);//浏览器时下窗口文档body的总宽度 
 
 $(document).scrollTop(); //获取滚动条到顶部的垂直高度
 $(document).scrollLeft(); //获取滚动条到左边的垂直宽度
+
+$("#div").width(),//width()返回元素的宽高，不包括padding/border/margin
+$("#div").innerWidth(),//innerWidth()返回元素的宽高 + padding
+$("#div").outerWidth(),//outerWidth()返回元素的宽高 + padding + border
+$("#div").outerWidth(true);//outerWidth(true)返回元素宽高 + padding + border + margin
+
+参考链接：https://blog.csdn.net/zjlovety/article/details/6641644
