@@ -1,0 +1,4 @@
+// 1、移动端bug
+var time=new Date("yyyy-mm-dd");
+//该日期格式在pc浏览器测试可以，在移动端不识别，建议全用
+var time=new Date("yyyy/mm/dd");
