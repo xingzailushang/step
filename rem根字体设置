@@ -17,3 +17,11 @@
         }, false);
     }, false);
 })($, window);
+
+
+//yinhe
+/*获取设备宽度，设置根字体大小*/
+document.documentElement.style.fontSize=document.documentElement.clientWidth*24/750+"px";
+window.onresize=function(){
+    document.documentElement.style.fontSize=document.documentElement.clientWidth*24/750+"px";
+}
