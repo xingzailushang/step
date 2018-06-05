@@ -1,7 +1,3 @@
-/**
- * Created by hexiaobo
- * on 2015/10/29.
- */
 Function.prototype.curry = function () {
     var c = Array.prototype.slice,
         a = c.apply(arguments),
