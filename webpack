@@ -1,0 +1,14 @@
+//参考链接：   https://www.jianshu.com/p/42e11515c10f
+
+//各种bug汇总：
+1、npm run server报错原因之一：Cannot find module 'webpack-cli/bin/config-yargs'
+  解决： 原因是找不到webpack-cli这个包，使用npm添加此包即可
+         npm install webpack-cli
+2、npm install --save-dev webpack -g
+    输入以上命令后: webpack -v 提示:
+    The CLI moved into a separate package: webpack-cli
+    这里提示安装 webpack-cli// 是因为到了webpack4, webpack 已经将 webpack 命令行相关的内容都迁移到 webpack-cli，
+    所以除了 webpack 外，我们还需要安装 webpack-cli
+   解决：
+   //因为上面的webpack是全局安装的,因此这里我们安装weback-cli也是需要全局安装的!
+        npm install --save-dev webpack-cli -g
