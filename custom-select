@@ -1,0 +1,81 @@
+<!-- html -->
+
+<div class="select_box">
+    <span class="select_txt" data-value="1">123</span><a class="selet_open"><b></b></a>
+    <div class="option">
+        <a data-value="1">123</a>
+        <a data-value="2">234</a>
+    </div>
+</div>
+
+//js
+
+//自定义下拉选项框
+$(".select_box").click(function(event){   
+    event.stopPropagation();
+    $(this).find(".option").toggle();
+    $(this).parent().siblings().find(".option").hide();
+});
+$(document).click(function(event){
+    var eo=$(event.target);
+    if($(".select_box").is(":visible") && eo.attr("class")!="option" && !eo.parent(".option").length)
+    $('.option').hide();                                      
+});
+/*赋值给文本框*/
+$(".option").on("click","a",function(){
+	var value=$(this).text();
+    $(this).parent().siblings(".select_txt").text(value).attr("data-value",$(this).data("value"));
+})
+
+/* css */
+
+/*自定义下拉选项框*/
+.select_box{
+    display: inline-block;
+    border: solid 1px #797979;
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: #ffffff;
+}
+.selet_open{
+    display: inline-block;
+    position: absolute;
+    right: 6px;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-width: 8px;
+    border-top-color: #000000;
+}
+.option{
+	width:100%;
+	border:solid 1px #EDE7D6;
+	position:absolute;
+	top:30px;
+	left:-1px;
+	z-index:2;
+	overflow:hidden;
+	display:none;
+}
+.option a{
+	display:block;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	padding:0 10px;
+	width:100%;
+	background:#fff;
+}
+.option a:hover{
+	background:#CCCCCC;
+	color: #FFFFFF;
+}
+/*自定义下拉选项框结束*/
