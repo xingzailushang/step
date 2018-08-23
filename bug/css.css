@@ -1,0 +1,8 @@
+/*  css bug   */
+
+/*  0 移动端滑动效果优化	*/
+
+/*		1、如果是div设置了滚动条导致滑动不顺畅，可以在css中加入-webkit-overflow-scrolling : touch;	*/
+/*		2、如果是幻灯片，可以用swiper插件一类的。	*/
+/*		3、尽量用css3开启GPU加速（css随便哪里加个{transform:transition3d(0,0,0);}），用transform:translate(x,y)代替mairgin或者top。	*/
+/*		4、减少滑动过程中的运动DOM。	*/
