@@ -1,0 +1,55 @@
+1、类似加汉语拼音标注的功能
+    ruby  rt  rp
+    
+    例：
+    <ruby>
+        漢 <rt><rp>(</rp>ㄏㄢˋ<rp>)</rp></rt>
+    </ruby>
+2、一句话中，用em表示重音，强调
+    今天我吃了一个 <em>苹果</em>。
+    今天我吃了<em>一个</em>苹果。
+3、文档标题结构中，表示主副标题
+    <hgroup>
+        <h1>主标题</h1>
+        <h2>副标题</h2>
+    </hgroup>
+4、缩写   可以在 <abbr> 标签中使用全局的 title 属性，这样就能够在鼠标指针移动到 <abbr> 元素上时显示出简称/缩写的完整版本。
+    The <abbr title="People's Republic of China">PRC</abbr> was founded in 1949.
+5、表引述
+    blockquote q cite
+    blockquote 表段落级引述内容
+    q 表行内的引述内容
+    cite 表引述的作品名
+    
+    5.1 blockquote
+    主流浏览器均不支持 cite 属性。不过，搜索引擎可能会使用该属性获得更多有关引用的信息。
+    <blockquote cite="http://www.wwf.org">
+        WWF's ultimate goal is to build a future where people live in harmony with nature.
+    </blockquote>
+    5.2 q
+    <q> 标签用于简短的行内引用。
+    <q>Here is a short quotation here is a short quotation</q>
+    5.3 cite
+    <cite> 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。
+    如果引用的这些文档有联机版本，还应该把引用包括在一个 <a> 标签中，从而把一个超链接指向该联机版本。
+6、time
+    我在 <time datetime="2008-02-14">情人节</time> 有个约会。
+7、表示与主文章相关的图像、照片等流内容
+    figure figcaption
+    <figure>
+     <img src="https://.....440px-NeXTcube_first_webserver.JPG"/>
+     <figcaption>The NeXT Computer used by Tim Berners-Lee at CERN.</figcaption>
+    </figure>
+8、pre 预排版过
+9、samp 
+10、code 内容为代码片段
+11、small 之前表示字体缩小的废弃标签，html5救回来表示补充评论
+14、kbd 用户输入，表示键盘按键居多
+15、sub 下标
+16、sup 上标
+17、bdi，bdo 用户多语言混合时指定语言或者书写方向
+18、mark 表示高亮，这里并非指显示为高亮，而是从读者角度希望的高亮
+19、wbr 表示可以换行的位置，主要是英文等文字不允许单词中间换行，这个标签一般在把多个单词粘成很长的单词时用
+20、menu ul的变体，用于功能菜单时使用
+21、main 整个页面只出现一个，表示页面的主要内容，可以理解为特殊的div
+
