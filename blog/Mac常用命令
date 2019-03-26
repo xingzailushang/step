@@ -1,0 +1,35 @@
+1、ls　 查看当前终端目录下面的文件
+　　ls -a　　"ls -a"会出现一些带.xxxx的文件名，列出所有内容，包括隐藏的文件和目录
+　　ls -l　　 列出长格式的目录的所有内容，内容如下.以空格区分
+      访问权。这些是在文件或目录中允许的操作。
+      硬链接数。此数字计算子目录和文件的数量。这个数字包括父目录link（..）和当前目录link（.）。
+      文件所有者的用户名
+      拥有该文件的组的名称
+      文件的大小（以字节为单位）。
+      文件上次修改的日期和时间。
+      文件或目录的名称。
+　　ls -t      在上次修改之前订购文件和目录。
+    ls -alt     这种子命令可以放在一起输出,如‘-alt’会把a和l和t所有都输出
+2、pwd   查看当前终端目录所在的位置
+3、cd    进入到某个文件夹      如:cd index 
+    使用如下
+    cd index  进入到当前目录下面的index文件夹
+    cd ..    ..是忘上走一层文件夹如果需要走多个请使用类似于这样的: ../../
+4、mkdir   创建一个文件夹    如: mkdir index2
+5、touch   创建一个文件      如: touch index.txt
+6、cp     复制文件到另一个文件夹如：cp index/text.html   html/          将index目录下面的text.html复制到html文件夹内
+    cp index/text.html  index/text2.html  html/    如要复制多个以空格隔开
+    cp index/t*.html  html/         *(通配符)代表所有的意思,这行会复制index目录下面所有以t开头的html文件
+7、mv     'cp'是复制文件,mv是转移文件它们的方法类似,如: mv index/text.html  html/   将index目录下的text.html文件转移到html内
+8、rm     删除文件 如:rm index.html         
+    rm -r index      rm是删除一个文件,不包含文件夹，如果需要删除文件夹输入rm -r xxxx会删除掉文件夹内所有文件
+9、echo     输入内容,如: echo  "hello world"　　
+    echo "hello world" > hello.txt      创建一个txt格式文本其内容为'hello world',想深入了解可以搜关键字“重定向”
+10、cat     输出内容,如：cat  hello.txt
+    cat hello.txt > world.txt    将hello里面的内容覆盖掉world.txt里面，输出cat world.txt可查看
+    cat hello.txt >> world.txt     将hello里面内容追加到world.txt后面
+    
+    
+    
+原链接： https://www.cnblogs.com/liang1/p/6806982.html
+更多命令参考链接： https://www.cnblogs.com/dongsheng/articles/2760057.html
