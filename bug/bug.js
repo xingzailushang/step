@@ -14,3 +14,8 @@ var abc=$("abc").attr("data-id");
 // body添加此css属性后，安卓移动端超出页面部分滚动无效，ios正常
 //解决：
   // touch-action:auto;
+
+//4、'NODE_ENV' 不是内部或外部命令，也不是可运行的程序 或批处理文件
+// Mac系统没问题，Windows系统下，改环境变量没用！！！
+// 安装cross-env：npm install cross-env，再在NODE_ENV=xxxxxxx前面添加cross-env，如：
+// "mini": "cross-env NODE_PAGE=mini npm run dev"
