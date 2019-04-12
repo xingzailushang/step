@@ -3,3 +3,23 @@
 //    webview内的页面路由跳转不会影响总的栈深度，算一层，但后退时路由都在，需要在内部一层一层后退
 //    超过十层后，每次页面跳转，都会自动跳第九层，然后再去新页面，所以页面会闪到第九层一下，交互很烦人
 //    最好，到了某些特定页面，把栈清空，免得超了影响交互体验
+
+// 2、小程序webview向小程序中传值
+      // 小程序
+      // template
+      <web-view :src="getUrl" @message="getPostMessage"></web-view>
+      
+      // script
+      getPostMessage (e) {
+        console.log('getPostMessage', e.mp.detail.data[0])
+      }
+      // h5
+      let a = parseInt(Math.random() * 10000)
+      swan.webView.postMessage({ data: a })
+      
+      // h5中传值后，接收情况
+        // 1、后退至小程序，可收到并输出
+        // 2、navigateTo 至小程序  接收不到
+        // 3、redirectTo 至小程序  可接收到
+        // 4、先发了一次 navigateTo 至小程序，再进入，然后再发送，再redirectTo至小程序，这时候，会一次性接收到两条信息，内容不一样，分两次展示，不在一个数组中
+        // 5、连着发两次，redirectTo 至小程序，两次的信息会在一个数组中，区别于第四种情况
